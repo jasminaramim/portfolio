@@ -1,8 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-darkBrown;
+  background: linear-gradient(to right, #1a0033, #3f0071, #6a1b9a); /* Darker purple neon gradient */
+  /* animation: neonGlow 2s infinite alternate; */
+  color: white; /* Adjust text color to contrast with dark background */
+}
+
+@keyframes neonGlow {
+  0% {
+    filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
 }
