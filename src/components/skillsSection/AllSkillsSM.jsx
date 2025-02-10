@@ -22,18 +22,12 @@ const skills = [
     skill: "JavaScript",
     icon: IoLogoJavascript,
   },
-  {
-    skill: "TypeScript",
-    icon: SiTypescript,
-  },
+ 
   {
     skill: "ReactJS",
     icon: FaReact,
   },
-  {
-    skill: "Redux",
-    icon: SiRedux,
-  },
+  
   {
     skill: "NextJS",
     icon: SiNextdotjs,

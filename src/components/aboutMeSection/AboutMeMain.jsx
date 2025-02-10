@@ -1,29 +1,37 @@
 import AboutMeImage from "./AboutMeImage";
 import AboutMeText from "./AboutMeText";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS CSS
+import { useEffect } from "react";
+
 const AboutMeMain = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: 'ease-out', // Easing function
+    });
+  }, []);
+
   return (
     <div
       id="about"
-      className="flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1200px] mx-auto mt-[100px] justify-between items-center"
+      className="flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1200px] mx-auto mt-[50px] lg:mt-[100px] justify-between items-center"
     >
-      <motion.div
-        variants={fadeIn("right", 0)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.7 }}
+      {/* AboutMeText with AOS animation */}
+      <div
+        data-aos="fade-right" // Add animation for fade in from the right
+        data-aos-delay="200" // Delay for staggered effect
       >
         <AboutMeText />
-      </motion.div>
-      <motion.div
-        variants={fadeIn("left", 0)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.7 }}
+      </div>
+      
+      {/* AboutMeImage with AOS animation */}
+      <div
+        data-aos="fade-left" // Add animation for fade in from the left
+        data-aos-delay="200" // Delay for staggered effect
       >
         <AboutMeImage />
-      </motion.div>
+      </div>
     </div>
   );
 };

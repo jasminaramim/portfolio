@@ -15,9 +15,9 @@ const HeroPic = () => {
 
       {/* Main Image */}
       <motion.img
-        src="../../../public/images/0e29c972-f8aa-41cc-9b75-bdacd5b1f871-removebg-preview.png"
+        src="/images/0e29c972-f8aa-41cc-9b75-bdacd5b1f871-removebg-preview.png"
         alt="Jasmin Ara Mim"
-        className="max-h-[550px] rounded-full border shadow-2xl border-purple-500 w-auto"
+        className="max-h-[550px] sm:max-h-[400px] md:max-h-[550px] rounded-full border shadow-2xl border-purple-500 w-auto"
         whileHover={{ opacity: 0.8 }} // Image opacity change on hover
         transition={{ duration: 0.3 }} // Smooth transition for opacity
       />

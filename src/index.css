@@ -5,16 +5,26 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(to right, #1a0033, #3f0071, #6a1b9a); /* Darker purple neon gradient */
-  /* animation: neonGlow 2s infinite alternate; */
+  background: linear-gradient(-45deg, #1a0033, #3f0071, #6a1b9a, #8e24aa);
+  background-size: 400% 400%;
+  animation: gradientAnimation 4s ease infinite;
   color: white; /* Adjust text color to contrast with dark background */
 }
 
-@keyframes neonGlow {
+@keyframes gradientAnimation {
   0% {
-    filter: brightness(1.1);
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
   }
   100% {
-    filter: brightness(0.5);
+    background-position: 0% 50%;
   }
 }

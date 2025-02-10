@@ -1,10 +1,15 @@
+// import { Lottie } from "lottie-react";
+import Lottie from "lottie-react";
+import aboutMeAnimation from "../../../public/lotti.json"; // Path to your Lottie JSON file
+
 const AboutMeImage = () => {
   return (
     <div className="h-[500px] w-[300px] relative">
       <div className="h-[500px] w-[300px] rounded-[100px] absolute overflow-hidden">
-        <img
-          src="../../public/images/about-me.jpg"
-          alt="About Me Image"
+        <Lottie
+          animationData={aboutMeAnimation} // Pass the animation data here
+          loop={true} // Set to true if you want it to loop
+          autoplay={true} // Set to true if you want it to autoplay
           className="h-full w-auto object-cover"
         />
       </div>
