@@ -1,7 +1,6 @@
 
-# Project Name : One Page Portfolio
+# Project Name : Portfolio
 ![Project Screenshot](./src/assets/image.png)
-## Description
 
 
 
@@ -12,13 +11,11 @@
 - React  
 - Vite  
 - Tailwind CSS  
-- Node.js (if applicable)  
-- Firebase (if applicable)  
-- Other technologies you used
+
 
 ---
 
-## README Content
+
 
 ### 📌 **Project Overview**
 
